@@ -2,7 +2,7 @@ class Overworld {
  constructor(config) {
    this.element = config.element;
    this.canvas = this.element.querySelector(".game-canvas");
-   this.ctx = this.canvas.getContext("2d");
+   this.ctx = this.canvas.getContext("2d"); //gives access to drawing methods that exist on canvas
  }
 
  init() {
@@ -12,7 +12,7 @@ class Overworld {
    };
    image.src = "/images/maps/DemoLower.png";
 
-
+   //these variables will move character around
    const x = 5;
    const y = 6;
 
@@ -24,9 +24,9 @@ class Overworld {
       0, //top cut,
       32, //width of cut
       32, //height of cut
-      x * 16 - 8,
+      x * 16 - 8, //position
       y * 16 - 18,
-      32,
+      32, //scale
       32
    )
    }
